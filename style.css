@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(blue, violet);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center; /* For better alignment on small screens */
+}
+
+.hero h1 {
+    font-size: 45px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px; /* Added space below heading */
+}
+
+.hero h1 span {
+    color: rgb(229, 33, 131);
+}
+
+.hero textarea {
+    height: 200px;
+    width: 100%; /* Make textarea responsive */
+    max-width: 500px;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    font-size: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+textarea::placeholder {
+    font-size: 16px;
+}
+
+.row {
+    width: 100%; /* Make row responsive */
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow items to wrap on small screens */
+}
+
+.row button {
+    background-color: green;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 30px;
+    color: #fff;
+    flex: 1; /* Allow buttons to resize */
+    max-width: 150px; /* Set a max width for buttons */
+}
+
+select {
+    color: #6d5b5b;
+    background-color: rgba(240, 240, 240, 0.897);
+    height: 40px; /* Increased height for better alignment */
+    width: 100%; /* Make select responsive */
+    max-width: 260px; /* Set a max width */
+    padding: 0 20px;
+    border-radius: 35px;
+    appearance: none;
+    -webkit-appearance: none; /* for Safari and Chrome */
+    -moz-appearance: none; /* for Firefox */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 35px; /* Smaller font size on tablets */
+    }
+
+    .hero textarea {
+        height: 150px; /* Adjust textarea height on tablets */
+        font-size: 18px;
+    }
+
+    .row button {
+        padding: 10px 20px; /* Smaller padding on tablets */
+    }
+
+    select {
+        height: 35px; /* Adjust select height on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 25px; /* Smaller font size on mobile */
+    }
+
+    .hero textarea {
+        height: 100px; /* Adjust textarea height on mobile */
+        font-size: 16px;
+    }
+
+    .row {
+        flex-direction: column; /* Stack items vertically on mobile */
+    }
+
+    .row button {
+        padding: 10px 15px; /* Smaller padding on mobile */
+        max-width: 100%; /* Allow buttons to take full width */
+    }
+
+    select {
+        height: 30px; /* Adjust select height on mobile */
+    }
+}
